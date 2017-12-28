@@ -1,0 +1,22 @@
+.vjs-history-bar{
+    z-index: 2;
+    position: absolute;
+    line-height: 2.5em;
+    bottom: 3em;
+    width: 100%;
+    padding:0 2em;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.vjs-history-bar .view-time{
+    color: #48bb64;
+    padding:0 5px;
+}
+.vjs-history-bar .replay{
+    display: inline-block;
+    color: #48bb64;
+    text-decoration: underline;
+    margin:0 10px;
+    cursor: pointer;
+}
