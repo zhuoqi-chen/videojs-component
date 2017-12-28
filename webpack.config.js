@@ -5,14 +5,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const extractTextPlugin = require('extract-text-webpack-plugin');
 const extractCSS = new extractTextPlugin('css/[name]-css.css');
 const extractLESS = new extractTextPlugin('css/[name]-less.css');
-module.exports = {
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const config = {
     entry: [
         'babel-polyfill',
         './src/index.js'
     ],
     output: {
         path: path.resolve(__dirname, './dist'),
-        publicPath: '/',
+        publicPath: '',
         filename: '[name].js'
     },
     module: {
@@ -63,3 +64,7 @@ module.exports = {
         })
     ]
 }
+if (process.env.NODE_ENV==='production') {
+    config.plugins.push(new UglifyJsPlugin())
+}
+module.exports = config;
