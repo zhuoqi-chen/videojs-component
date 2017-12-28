@@ -2,6 +2,7 @@
 
 # demo
 
+https://zhuoqi-chen.github.io/videojs-component/dist/
 
 ## run
 ```
